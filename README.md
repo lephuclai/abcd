@@ -1,5 +1,5 @@
 # 1. DOCKER OVERVIEW
-![](docker-banner.png)
+![](images/docker-banner.png)
 
 * Docker is a platform for developing, shipping and running applications. Docker gives you an ability to seperate your applications from yoir infrastructure so that you can deliver your software quickly, reduce the delay between writing code and running it in production. 
 
@@ -14,7 +14,7 @@
 
 ## 1.3 Docker architecture:
 * Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers.
-![](architecture.png)
+![](images/architecture.png)
 
 ## 1.4 Docker objects:
 * Images: a read-only template with instructions for creating a Docker container
@@ -226,7 +226,7 @@ docker compose up
 * To check whether the containers is running properly, we can use 
 ```docker ps -a```
 * The results is given below:
-![](docker_ps.png)
+![](images/docker_ps.png)
 
 ## 3.7 Import attenddees' information to MongoDB
 * Firstly, I will convert the given .xslx file to .json format. The result is given below:
@@ -263,7 +263,7 @@ mongoimport --db attendees --collection attendees --file attendees.json
 
 ## 3.8 Results
 * Open the browser and go to http://127.0.0.1:5000/, we can see the results below:
-![](result.png)
+![](images/result.png)
 
 # Refferences:
 * [Docker Overview](https://docs.docker.com/get-started/overview/)
