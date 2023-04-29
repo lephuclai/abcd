@@ -24,7 +24,8 @@
 
 ## 3.7 Import attenddees' information to MongoDB
 * Firstly, I will convert the given .xslx file to .json format. The result is given below:
-`{
+```
+{
   "STT": 1,
   "Name": "Bùi Minh Sơn",
   "DOB": 2002,
@@ -40,17 +41,18 @@
   "Univerity": "Đại học Bách khoa Hà Nội",
   "Major": "Điện tử viễn thông"
  }
- ...
- `
+```
+
 
 * Then, I copy it to the mongodb container using this command:
 'docker cp attendees.json <container id>:/tmp' 
 
 * After that, i will go into the container and import the .json file to a MongoDB database using these commands:
-'docker exec -it mongodb bash
+```
+docker exec -it mongodb bash
 cd tmp
 mongoimport --db attendees --collection attendees --file attendees.json
-'
+```
     * the -it flag allows me to use the keyboard whem i'm inside the container
 
 ## 3.8 Results
