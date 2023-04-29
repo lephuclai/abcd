@@ -27,8 +27,8 @@
     * The ARG instruction defines a variable that users can pass at build-time to the builder with the docker buildcommand using the --build-arg <varname>=<value> flag. A Dockerfile may include one or more ARG instructions. For example, the following is a valid Dockerfile:
 
 * ENV:
-    * ```ENV <key> <value>
-    ENV <key>=<value> ...```
+    * ```ENV <key> <value>```
+    ```ENV <key>=<value> ...```
     * The ENV instruction sets the environment variable <key> to the value <value>. This value will be in the environment for all subsequent instructions in the build stage and can be replaced inline in many as well.
     * The ENV instruction has two forms. The first form, ENV <key> <value>, will set a single variable to a value. The entire string after the first space will be treated as the <value> – including whitespace characters. The value will be interpreted for other environment variables, so quote characters will be removed if they are not escaped.
     * The second form, ENV <key>=<value> ..., allows for multiple variables to be set at one time. Notice that the second form uses the equals sign (=) in the syntax, while the first form does not. Like command line parsing, quotes and backslashes can be used to include spaces within values.
@@ -53,9 +53,7 @@
     * Specifies the command to run when a container is launched (different from RUN instruction running the command when the container is being built)
 
 * ENTRYPOINT
-    * ```
-    ENTRYPOINT ["executable", "param1", "param2"] (exec form, preferred)
-    ENTRYPOINT command param1 param2 (shell form)```
+    * ```ENTRYPOINT ["executable", "param1", "param2"] (exec form, preferred)``````ENTRYPOINT command param1 param2 (shell form)```
     * Allows you to configure a container that will run as an executable.
 
 * ENTRYPOINT command and parameters are not overridden when Docker container runs with command line parameters 
@@ -228,7 +226,7 @@ docker compose up
 * To check whether the containers is running properly, we can use 
 ```docker ps -a```
 * The results is given below:
-![]()
+![](docker_ps.png)
 
 ## 3.7 Import attenddees' information to MongoDB
 * Firstly, I will convert the given .xslx file to .json format. The result is given below:
@@ -268,6 +266,6 @@ mongoimport --db attendees --collection attendees --file attendees.json
 ![](result.png)
 
 # Refferences:
-[Docker Overview](https://docs.docker.com/get-started/overview/)
-[Dockerfile Instructions](https://www.australtech.net/dockerfile-instructions/)
-[Set Up Flask with MongoDB and Docker](https://www.digitalocean.com/community/tutorials/how-to-set-up-flask-with-mongodb-and-docker#step-2-writing-the-flask-and-web-server-dockerfiles)
+* [Docker Overview](https://docs.docker.com/get-started/overview/)
+* [Dockerfile Instructions](https://www.australtech.net/dockerfile-instructions/)
+* [Set Up Flask with MongoDB and Docker](https://www.digitalocean.com/community/tutorials/how-to-set-up-flask-with-mongodb-and-docker#step-2-writing-the-flask-and-web-server-dockerfiles)
